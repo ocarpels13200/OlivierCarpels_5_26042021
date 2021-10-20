@@ -1,0 +1,323 @@
+.restaurantpicture{ /*Mise en page de l'image*/
+    @include restaurantMenuContainer;
+    & > img{
+        @include restaurantMenuPicture;
+    }
+}
+.mainMenu{ /*Mise en page générale de la partie restaurant, titre, menus et bouton*/
+    background-color: $grey1;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+    z-index: 5;
+    margin-top: -60px;
+    padding-bottom: 1px;
+}
+.menu{
+    &__restaurant{
+        display: flex;
+    }
+    &__title{ /*Mise en page du titre */
+        flex-basis: 80%;
+        @include font1;
+        font-weight: bold;
+        margin-left: 15px;
+    }
+    &__heart{ /*Mise en page du coeur */
+        flex-basis: 20%;
+        position: relative;
+        &--yes{
+            position: absolute;
+            right: 115px;
+            top: 17px;
+            z-index: -1;
+            color: $primaryColor;
+            opacity: 0;
+            transition: opacity 1.5s;
+        }
+        &--no{
+            position: absolute;
+            right: 115px;
+            top: 17px;
+            z-index: 1;
+            opacity: 0.5;
+            transition: opacity 1.5s;
+        }
+        &:hover .menu__heart--yes{
+            z-index: 1;
+            opacity: 1;
+        }
+        &:hover .menu__heart--no{
+            z-index: -1;
+            opacity: 0;
+        }
+    }
+
+    &__firstcourse{ /*Mise en page générale des entrées */
+        background-color: $white;
+        border-radius: 10px;
+        margin: 15px 15px;
+        height: 50px;
+        /*Gestion animations plats - boucle*/
+        opacity: 0;
+        transform: translateY(20px);
+        animation: menuanimation $anim-speed linear;
+        animation-fill-mode:forwards;
+        @for $i from 1 through 6{
+        &:nth-child(#{$i}){
+            animation-delay: $i * 0.20s;
+            }
+        }
+    }
+    &__firstcoursetitle{
+        position: relative;
+        margin: 0px 0px 45px 15px;
+        padding-top: 20px;
+        animation: menutitleanimation 0.8s both;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            display: inline-block;
+            height: 3px;
+            width: 50px;
+            background-color: $tertiaryColor;
+        }
+    }
+
+    &__maincourse{ /*Mise en page générale des plats */
+        background-color: $white;
+        border-radius: 10px;
+        margin: 15px 15px;
+        height: 50px;
+        /*Gestion animations plats - boucle*/
+        opacity: 0;
+        transform: translateY(20px);
+        animation: menuanimation $anim-speed linear;
+        animation-fill-mode:forwards;
+        @for $i from 1 through 6{
+        &:nth-child(#{$i}){
+            animation-delay: $i * 0.20s;
+            }
+        }
+    }
+    &__maincoursetitle{
+        position: relative;
+        margin: 0px 0px 45px 15px;
+        padding-top: 20px;
+        animation: menutitleanimation 0.8s both;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            display: inline-block;
+            height: 3px;
+            width: 50px;
+            background-color: $tertiaryColor;
+        }
+    }
+    &__dessert{ /*Mise en page générale des desserts */
+        background-color: $white;
+        border-radius: 10px;
+        margin: 15px 15px;
+        height: 50px;
+        /*Gestion animations plats - boucle*/
+        opacity: 0;
+        transform: translateY(20px);
+        animation: menuanimation $anim-speed linear;
+        animation-fill-mode:forwards;
+        @for $i from 1 through 6{
+        &:nth-child(#{$i}){
+            animation-delay: $i * 0.20s;
+            }
+        }
+    }
+    &__desserttitle{
+        position: relative;
+        margin: 0px 0px 45px 15px;
+        padding-top: 20px;
+        animation: menutitleanimation 0.8s both;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            display: inline-block;
+            height: 3px;
+            width: 50px;
+            background-color: $tertiaryColor;
+        }
+    }
+
+    &__layout{ /*Mise en page générale des contenus */
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        &:hover .menu__layout3{ /*Gestion apparition de la coche et animation*/
+            flex: 0 0 10%;
+            background-color: $tertiaryColor;
+            color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: cocheanimation 0.5s both;
+        }
+        &:hover .menu__firstcourse--effect{
+            animation: rotatecocheanimation 0.5s both;
+        }
+    }
+    &__layout1{ /*Mise en page nom du plat et description */
+        align-self: flex-end;
+        flex: 1 1 80%;
+        padding: 5px;
+        overflow: hidden;
+        & > p:first-child{
+            font-weight: bold;
+            font-size: $paragraphfontsize;
+        }
+        & > p{
+            margin: 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: $paragraphfontsize_restaurants;
+        }
+    }
+    &__layout2{ /*Mise en page du prix */
+        flex: 1 0 10%;
+        align-self: flex-end;
+        display: flex;
+        padding: 5px;
+        & > p{
+            margin: 0px;
+            font-weight: bold;
+            font-size: $paragraphfontsize_restaurants;
+        }
+    }
+    &__layout3{ /*Mise en page de la coche */
+        display: none;
+    }
+}
+
+/*Animations des menus*/
+@keyframes menutitleanimation {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+@keyframes menuanimation {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*Animations de la coche*/
+@keyframes cocheanimation {
+    0% {
+        transform: translate(20px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@keyframes rotatecocheanimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+/*Mode responsive*/
+@media screen and (max-width: 599px){   /*Mode mobile*/
+    .menu__heart--no{
+        right: 30px;
+    }
+    .menu__heart--yes{
+        right: 30px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1023px){  /*Mode tablette*/
+    .mainMenu{
+        @include tablettemode;
+        margin-top: -60px;
+    }
+    .menu__firstcourse{
+        max-width: 330px;
+    }
+    .menu__maincourse{
+        max-width: 330px;
+    }
+    .menu__dessert{
+        max-width: 330px;
+    }
+    .responsive{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        &__firstcourse{
+            flex-basis: 50%;
+            margin: 0;
+        }
+        &__maincourse{
+            flex-basis: 50%;
+            margin: 0;
+        }
+        &__dessert{
+            flex-basis: 50%;
+            margin: 0;
+        }
+    }
+    .footer{
+        @include tablettemode
+    }
+}
+@media screen and (min-width: 1024px) {  /*Mode Desktop*/
+    .mainMenu{
+        @include desktopmode;
+        margin-top: -60px;
+    }
+    .menu__firstcourse{
+        width: 90%;
+    }
+    .menu__maincourse{
+        width: 90%;
+    }
+    .menu__dessert{
+        width: 90%;
+    }
+    .responsive{
+        display: flex;
+        flex-wrap: wrap;
+        &__firstcourse{
+            flex-basis: 33.33%;
+            margin: 0;
+        }
+        &__maincourse{
+            flex-basis: 33.33%;
+            margin: 0;
+        }
+        &__dessert{
+            flex-basis: 33.33%;
+            margin: 0;
+        }
+    }
+    .footer{
+        @include desktopmode
+    }
+}
