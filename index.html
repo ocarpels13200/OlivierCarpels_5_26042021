@@ -23,8 +23,8 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <!--Menu-->
                     <div class="collapse navbar-collapse" id="navbarContent">
+                        <!--Menu-->
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a href="index.html" class="nav-link active d-flex flex-column align-items-center">
@@ -42,23 +42,36 @@
                                     Panier
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="views/account.html" class="nav-link nav-link d-flex flex-column align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                                    </svg>
-                                    Compte
-                                </a>
-                            </li>
                         </ul>
+                        <!--Formulaire de recherche-->
+                        <div>
+                            <form action="" id="searchForm">
+                                <div class="input-group">
+                                    <input type="search" name="search" placeholder="Rechercher" class="form-control">
+                                    <button type="submit" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--Se connecter-->
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" data-bs-toggle="offcanvas" data-bs-target="#connect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </nav>
                 <!--Fil d'ariane-->
-                <nav>
+                <section>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item active">Accueil</li>
                     </ol>
-                </nav>
+                </section>
             </div>
     </header>
     <main class="container">
@@ -86,9 +99,16 @@
         </div>
         <!--Titre de la page-->
         <h1 class="h4 mt-3">Nos produits</h1>
+        <!--Message d'alerte-->
+        <div class="alert alert-info alert-dismissible show fade">
+            <div>
+                <p class="h6">En raison de la rareté des appareils présents sur notre site, nous vous invitons à le consulter régulièrement.</p> 
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
         <!--Cards de présentation des produits-->
-        <div class="row my-4 gy-3">
-            <div class="col-12 col-md-6 col-lg-4">
+        <section class="row my-4 gy-3">
+            <article class="col-12 col-md-6 col-lg-4">
                 <a href="views/product.html">
                     <div class="card border-dark">
                         <img src="" alt="" class="card-img-top">
@@ -102,8 +122,8 @@
                         </div>
                     </div>
                 </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            </article>
+            <article class="col-12 col-md-6 col-lg-4">
                 <a href="views/product.html">
                     <div class="card border-dark">
                         <img src="" alt="" class="card-img-top">
@@ -117,8 +137,8 @@
                         </div>
                     </div>
                 </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            </article>
+            <article class="col-12 col-md-6 col-lg-4">
                 <a href="views/product.html">
                     <div class="card border-dark">
                         <img src="" alt="" class="card-img-top">
@@ -132,8 +152,8 @@
                         </div>
                     </div>
                 </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            </article>
+            <article class="col-12 col-md-6 col-lg-4">
                 <a href="views/product.html">
                     <div class="card border-dark">
                         <img src="" alt="" class="card-img-top">
@@ -147,8 +167,8 @@
                         </div>
                     </div>
                 </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            </article>
+            <article class="col-12 col-md-6 col-lg-4">
                 <a href="views/product.html">
                     <div class="card border-dark">
                         <img src="" alt="" class="card-img-top">
@@ -162,8 +182,8 @@
                         </div>
                     </div>
                 </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            </article>
+            <article class="col-12 col-md-6 col-lg-4">
                 <a href="views/product.html">
                     <div class="card border-dark">
                         <img src="" alt="" class="card-img-top">
@@ -177,7 +197,8 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </article>
+        </section>
     </main>
     <!--Pied de page-->
     <footer class="footer">
@@ -202,5 +223,24 @@
             </div>
         </div>
     </footer>
+    <section class="offcanvas offcanvas-end" id="connect">
+        <div class="offcanvas-header">
+            <h2 class="h6">Se connecter</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="mb-3 form-floating">
+                    <input type="text" name="identifiant" class="form-control" placeholder="Prénom et Nom de famille" id="identifiant">
+                    <label for="identifiant">Prénom et Nom de famille :</label>
+                </div>
+                <div class="mb-3 form-floating">
+                    <input type="password" name="password" class="form-control" placeholder="Votre mot de passe" id="password">
+                    <label for="password"">Votre mot depasse :</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Se connecter</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
