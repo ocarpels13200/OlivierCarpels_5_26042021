@@ -39,7 +39,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="account.html" class="nav-link nav-link d-flex flex-column align-items-center">
+                                <a href="#" class="nav-link nav-link d-flex flex-column align-items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                                     </svg>
@@ -52,43 +52,24 @@
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
-                        <li class="breadcrumb-item active">Produit</li>
+                        <li class="breadcrumb-item active">Compte</li>
                     </ol>
                 </nav>
             </div>
     </header>
     <main class="container">
-        <h1 class="h4 mt-3"></h1>
-        <div class="row my-4 gy-3">
-            <div class="col-12 col-md-8">
-                <div class="card border-dark">
-                    <img src="" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h2 class="h6 card-title">
-                            Descriptif
-                        </h2>
-                        <p class="card-text">
-                            
-                        </p>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-outline-primary">Commander</button>
-                        </div>
-                    </div>
-                </div>
+        <h1 class="h4 mt-3">Connexion à votre compte</h1>
+        <form class="mb-3">
+            <div class="form-group mb-3">
+                <label for="identifiant" class="form-label">Adresse Email :</label>
+                <input type="text" class="form-control" placeholder="Email address" id="identifiant">
             </div>
-            <div class="col-12 col-md-4">
-                <div class="card border-dark">
-                    <img src="" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h2 class="h6 card-title">
-                            Options
-                        </h2>
-                        <p class="card-text">
-                            
-                        </p>
-                    </div>
-                </div>
+            <div class="form-group mb-3">
+                <label for="password" class="form-label">Mot depasse :</label>
+                <input type="password" class="form-control" id="password">
             </div>
+            <button type="submit" class="btn btn-primary">Connexion</button>
+        </form>
     </main>
     <footer class="footer">
         <div class="container">
