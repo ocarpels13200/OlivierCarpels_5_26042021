@@ -31,7 +31,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="basket.html" class="nav-link d-flex flex-column align-items-center">
+                                <a href="#" class="nav-link active d-flex flex-column align-items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
                                         <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
                                     </svg>
@@ -52,53 +52,61 @@
                 <section>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
-                        <li class="breadcrumb-item active">Produit</li>
+                        <li class="breadcrumb-item active">Panier</li>
                     </ol>
                 </section>
             </div>
     </header>
     <main class="container">
-        <h1 class="h4 mt-3"></h1>
+        <h1 class="h4 mt-3">Mon panier</h1>
         <div class="row my-4 gy-3">
-            <div class="col-12 col-md-8">
-                <div class="card border-dark">
-                    <img src="" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h2 class="h6 card-title">
-                            Descriptif
-                        </h2>
-                        <p class="card-text">
-                            
-                        </p>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-outline-primary">Ajouter au panier</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card border-dark">
-                    <img src="" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h2 class="h6 card-title">
-                            Options
-                        </h2>
-                        <p class="card-text">
-                            Vous pouvez choisir dans la liste déroulante ci-dessous une option.
-                        </p>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Désignation du produit</th>
+                        <th>Prix unitaire TTC</th>
+                        <th>Quantité</th>
+                        <th>Total TTC</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td class="col-6">*</td>
+                    <td class="col-2">*</td>
+                    <td class="col-2">
                         <form>
-                            <label for="option" class="form-label">Options disponibles :</label>
                             <select name="option" id="option" class="form-select">
-                                <option selected>---Choisissez votre option---</option>
-                                <option value="alim">Bloc d'alimentation supplémentaire</option>
-                                <option value="k7">Lot de 5 cassettes</option>
-                                <option value="visio">Visionneuse de diapositives</option>
-                                <option value="dev">Développeuse Kodak</option>
+                                <option selected>---Quantité---</option>
+                                <option value="alim">1</option>
+                                <option value="k7">2</option>
+                                <option value="visio">3</option>
                             </select>
                         </form>
-                    </div>
-                </div>
-            </div>
+                    </td>
+                    <td class="col-2">*</td>
+                </tr>
+                <tr>
+                    <td class="col-6">*</td>
+                    <td class="col-2">*</td>
+                    <td class="col-2">
+                        <form>
+                            <select name="option" id="option" class="form-select">
+                                <option selected>---Quantité---</option>
+                                <option value="alim">1</option>
+                                <option value="k7">2</option>
+                                <option value="visio">3</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td class="col-2">*</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <th>Total TTC</th>
+                    <td>*</td>
+                </tr>
+            </table>
+            <button type="button" class="col-2 offset-10 my-3 btn btn-outline-primary">Commander</button>
         </div>
     </main>
     <footer class="footer">
