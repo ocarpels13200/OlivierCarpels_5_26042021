@@ -59,7 +59,7 @@
     </header>
     <main class="container">
         <h1 class="h4 mt-3">Mon panier</h1>
-        <div class="row my-4 gy-3">
+        <div class="row my-4">
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
@@ -70,9 +70,9 @@
                     </tr>
                 </thead>
                 <tr>
-                    <td class="col-6">*</td>
-                    <td class="col-2">*</td>
-                    <td class="col-2">
+                    <td class="col-3 col-sm-6">*</td>
+                    <td class="col-3 col-sm-2">*</td>
+                    <td class="col-3 col-sm-2">
                         <form>
                             <select name="option" id="option" class="form-select">
                                 <option selected>---Quantité---</option>
@@ -82,12 +82,12 @@
                             </select>
                         </form>
                     </td>
-                    <td class="col-2">*</td>
+                    <td class="col-3 col-sm-2">*</td>
                 </tr>
                 <tr>
-                    <td class="col-6">*</td>
-                    <td class="col-2">*</td>
-                    <td class="col-2">
+                    <td class="col-3 col-sm-6">*</td>
+                    <td class="col-3 col-sm-2">*</td>
+                    <td class="col-3 col-sm-2">
                         <form>
                             <select name="option" id="option" class="form-select">
                                 <option selected>---Quantité---</option>
@@ -97,7 +97,7 @@
                             </select>
                         </form>
                     </td>
-                    <td class="col-2">*</td>
+                    <td class="col-3 col-sm-2">*</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -106,7 +106,43 @@
                     <td>*</td>
                 </tr>
             </table>
-            <button type="button" class="col-2 offset-10 my-3 btn btn-outline-primary">Commander</button>
+            <div class="">
+                <form>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="text" name="Prenom" class="form-control" placeholder="Prénom" id="prenom">
+                                <label for="Prenom">Prénom :</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="text" name="Nom" class="form-control" placeholder="Nom" id="Nom">
+                                <label for="Nom">Nom :</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="text" name="Adresse" class="form-control" placeholder="Adresse" id="Adresse">
+                        <label for="Adresse">Adresse :</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mb-3 form-floating">
+                                <input type="text" name="CP" class="form-control" placeholder="Code postal" id="CP">
+                                <label for="CP">Code postal :</label>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="mb-3 form-floating">
+                                <input type="text" name="Ville" class="form-control" placeholder="Ville" id="Ville">
+                                <label for="Ville">Ville :</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button type="button" class="col-4 offset-7 col-sm-3 offset-sm-9 col-lg-2 offset-lg-10 my-3 btn btn-outline-primary">Commander</button>
         </div>
     </main>
     <footer class="footer">
