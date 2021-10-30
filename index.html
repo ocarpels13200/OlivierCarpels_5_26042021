@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./publics_html/CSS/bootstrap.min.css">
     <link rel="stylesheet" href="./publics_html/CSS/style.css">
     <script src="./publics_html/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./publics_html/js/welcome.js" defer></script>
     <title>Orinoco - Caméras vintages</title>
 </head>
 <body>
@@ -63,16 +64,18 @@
                                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                                 </svg>
                             </button>
+                            <p id="welcome" class="col-3"></p>
                         </div>
                     </div>
                 </nav>
                 <!--Fil d'ariane-->
-                <section>
+                <section class="col-9">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item active">Accueil</li>
                     </ol>
                 </section>
             </div>
+
     </header>
     <main class="container">
         <!--Début du Carousel-->
@@ -108,92 +111,125 @@
         </div>
         <!--Cards de présentation des produits-->
         <section class="row my-4 gy-3">
+            <div class="card-deck"></div>
             <article class="col-12 col-md-6 col-lg-4">
-                <a href="views/product.html">
-                    <div class="card border-dark">
-                        <img src="" alt="" class="card-img-top">
+                <a href="views/product.html" class="text-decoration-none">
+                    <div class="card border-dark h-100">
+                        <img src="Images/camera/camera1.jpg" alt="camera1" class="card-img-top">
                         <div class="card-body">
                             <h2 class="h5 card-title">
-                                
+                                Description :
                             </h2>
-                            <p class="card-text">
-                                
+                            <p class="card-text text-dark">
+                                Appareil photo de la marque Kodak.<br>
+                                Avec son étui compact attachée à une cordelette.<br>
+                                Notons que l'appareil photos quelques traces d'usure usuelle.
                             </p>
+                        </div>
+                        <div class="col-2 border rounded-circle text-center text-light bg-dark position-absolute bottom-0 end-0 mb-3 me-3">
+                            150€
                         </div>
                     </div>
                 </a>
             </article>
             <article class="col-12 col-md-6 col-lg-4">
-                <a href="views/product.html">
-                    <div class="card border-dark">
-                        <img src="" alt="" class="card-img-top">
+                <a href="views/product.html" class="text-decoration-none">
+                    <div class="card border-dark h-100">
+                        <img src="Images/camera/camera2.jpg" alt="camera2" class="card-img-top">
                         <div class="card-body">
                             <h2 class="h5 card-title">
-                                
+                                Description :
                             </h2>
-                            <p class="card-text">
-                                
+                            <p class="card-text text-dark">
+                                projecteur en métal et plastique Bell et howell<br>
+                                Couleur: Multicolore<br>
+                                Dimensions: 29 x 33 x 31 cm
                             </p>
+                        </div>
+                        <div class="col-2 border rounded-circle text-center text-light bg-dark position-absolute bottom-0 end-0 mb-3 me-3">
+                            150€
                         </div>
                     </div>
                 </a>
             </article>
             <article class="col-12 col-md-6 col-lg-4">
-                <a href="views/product.html">
-                    <div class="card border-dark">
-                        <img src="" alt="" class="card-img-top">
+                <a href="views/product.html" class="text-decoration-none">
+                    <div class="card border-dark h-100">
+                        <img src="Images/camera/camera3.jpg" alt="camera3" class="card-img-top">
                         <div class="card-body">
                             <h2 class="h5 card-title">
-                                
+                                Description :
                             </h2>
-                            <p class="card-text">
-                                
+                            <p class="card-text text-dark">
+                                Caméra Keystone 8mm<br>
+                                matière plastique et métal<br>
+                                Couleur: Multicolore<br>
+                                Dimensions: 6 x 18 x 20 cm
                             </p>
+                        </div>
+                        <div class="col-2 border rounded-circle text-center text-light bg-dark position-absolute bottom-0 end-0 mb-3 me-3">
+                            150€
                         </div>
                     </div>
                 </a>
             </article>
             <article class="col-12 col-md-6 col-lg-4">
-                <a href="views/product.html">
-                    <div class="card border-dark">
-                        <img src="" alt="" class="card-img-top">
+                <a href="views/product.html" class="text-decoration-none">
+                    <div class="card border-dark h-100">
+                        <img src="Images/camera/camera4.jpg" alt="camera4" class="card-img-top">
                         <div class="card-body">
                             <h2 class="h5 card-title">
-                                
+                                Description :
                             </h2>
-                            <p class="card-text">
-                                
+                            <p class="card-text text-dark">
+                                Caméra vintage Gaf 714 auto Zoom super 8 et sa sacoche.<br>
+                                Objectif: 1,8 / 9 - 36 mm<br>
+                                Exposition automatique
                             </p>
+                            <div class="col-2 border rounded-circle text-center text-light bg-dark position-absolute bottom-0 end-0 mb-3 me-3">
+                                150€
+                            </div>
                         </div>
                     </div>
                 </a>
             </article>
             <article class="col-12 col-md-6 col-lg-4">
-                <a href="views/product.html">
-                    <div class="card border-dark">
-                        <img src="" alt="" class="card-img-top">
+                <a href="views/product.html" class="text-decoration-none">
+                    <div class="card border-dark h-100">
+                        <img src="Images/camera/camera5.jpg" alt="camera5" class="card-img-top">
                         <div class="card-body">
                             <h2 class="h5 card-title">
-                                
+                                Description :
                             </h2>
-                            <p class="card-text">
-                                
+                            <p class="card-text text-dark">
+                                Polaroid 600 - One Step 600 - Caméra film instantanée.<br>
+                                Polaroid spirit 600<br>
+                                Couleur: Multicolore
                             </p>
+                            <div class="col-2 border rounded-circle text-center text-light bg-dark position-absolute bottom-0 end-0 mb-3 me-3">
+                                150€
+                            </div>
                         </div>
                     </div>
                 </a>
             </article>
             <article class="col-12 col-md-6 col-lg-4">
-                <a href="views/product.html">
-                    <div class="card border-dark">
-                        <img src="" alt="" class="card-img-top">
+                <a href="views/product.html" class="text-decoration-none">
+                    <div class="card border-dark h-100">
+                        <img src="Images/camera/camera6.jpg" alt="camera6" class="card-img-top">
                         <div class="card-body">
                             <h2 class="h5 card-title">
-                                
+                                Description :
                             </h2>
-                            <p class="card-text">
-                                
+                            <p class="card-text text-dark">                                
+                                fujica single-8p2 camera 8mm<br>
+                                en bon état<br>
+                                Couleur: Multicolore<br>
+                                Dimensions: 5 x 15 x 23 cm<br>
                             </p>
+                        </div>
+                        <div class="col-2 border rounded-circle text-center text-light bg-dark position-absolute bottom-0 end-0 mb-3 me-3">
+                            150€
                         </div>
                     </div>
                 </a>
@@ -243,7 +279,4 @@
         </div>
     </section>
 </body>
-<script>
-    console.log("Coucou !");
-</script>
 </html>
