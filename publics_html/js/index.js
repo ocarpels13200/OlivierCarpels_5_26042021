@@ -1,42 +1,86 @@
-// Création d'une classe product comprenant l'image, la description et le prix de chaque produit //
-class products{
-    constructor(descriptionLine1,descriptionLine2,descriptionLine3,money){
-        this.descriptionLine1 = descriptionLine1;
-        this.descriptionLine2 = descriptionLine2;
-        this.descriptionLine3 = descriptionLine3;
-        this.money = money;
+// Création d'une variable contenant un tableau tableau //
+const products = [
+        {
+            pictures : "Images/camera/camera1.jpg",
+            picturesAlt : "Caméra 1",
+            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed eleifend risus. Suspendisse potenti.",
+            money : "150€"
+        },
+        {
+            pictures : "Images/camera/camera2.jpg",
+            picturesAlt : "Caméra 2",
+            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed eleifend risus. Suspendisse potenti.",
+            money : "200€"
+        },
+        {
+            pictures : "Images/camera/camera3.jpg",
+            picturesAlt : "Caméra 3",
+            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed eleifend risus. Suspendisse potenti.",
+            money : "130€"
+        },
+        {
+            pictures : "Images/camera/camera4.jpg",
+            picturesAlt : "Caméra 4",
+            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed eleifend risus. Suspendisse potenti.",
+            money : "120€"
+        },
+        {
+            pictures : "Images/camera/camera5.jpg",
+            picturesAlt : "Caméra 5",
+            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed eleifend risus. Suspendisse potenti.",
+            money : "50€"
+        },
+        {
+            pictures : "Images/camera/camera6.jpg",
+            picturesAlt : "Caméra 6",
+            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed eleifend risus. Suspendisse potenti.",
+            money : "300€"
+        }
+]
+
+// Fonction permettant de créer les cartes produits sur la page index.html //
+function createProduct (){
+    for (index in products){
+        // Recherche sur le code HTML actuel l'ID "cardsSection" //
+        let cardsSection = document.getElementById('cardsSection');
+        // Création des balises articles et injection dans la page index.html //
+        let newArticle = document.createElement("article");
+        newArticle.classList.add("col-12", "col-md-6", "col-lg-4");
+        cardsSection.appendChild(newArticle);
+        // Création des balises liens (anchor) et injection dans la page index.html //
+        let newLink = document.createElement("a");
+        newLink.href = 'views/product.html';
+        newLink.classList.add("text-decoration-none");
+        newArticle.appendChild(newLink);
+        // Création des balises div (card) et injection dans la page index.html //
+        let cardDiv = document.createElement("div");
+        cardDiv.classList.add("card", "border-dark", "h-100");
+        newLink.appendChild(cardDiv);
+        // Création des balises images et injection dans la page index.html //
+        let cardPicture = document.createElement("img");
+        cardPicture.src = products[index].pictures;
+        cardPicture.alt = products[index].picturesAlt;
+        cardDiv.appendChild(cardPicture);
+        // Création des balises div (card body) et injection dans la page index.html //
+        let cardBody = document.createElement("div");
+        cardBody.classList.add("card-body");
+        cardDiv.appendChild(cardBody);
+        // Création des balises h2 (card title) et injection dans la page index.html //
+        let cardTitle = document.createElement("h2");
+        cardTitle.classList.add("h5", "card-body");
+        cardTitle.innerHTML = "Description :";
+        cardDiv.appendChild(cardTitle);
+        // Création des balises paragraphes (card texte) et injection dans la page index.html //
+        let cardDescription = document.createElement("p");
+        cardDescription.classList.add("card-text", "text-dark", "p-2");
+        cardDescription.innerHTML = products[index].description;
+        cardDiv.appendChild(cardDescription);
+        // Création des balises div (Prix) et injection dans la page index.html //
+        let cardPrice = document.createElement("div");
+        cardPrice.classList.add("col-8", "offset-2", "border", "rounded-pill", "text-center", "text-light", "bg-dark", "mb-1", "py-2");
+        cardPrice.innerHTML = products[index].money;
+        cardDiv.appendChild(cardPrice);
     }
 }
-// Création des instances de classe -> produits //
-let product0 = new products("Appareil photo de la marque Kodak.", "Avec son étui compact attachée à une cordelette.", "Notons que l'appareil photos quelques traces d'usure usuelle.", "150€");
-let product1 = new products("projecteur en métal et plastique Bell et howell.", "Couleur: Multicolore.", "Dimensions: 29 x 33 x 31 cm", "200€");
-let product2 = new products("Caméra Keystone 8mm", "matière plastique et métal.", "Couleur: Multicolore.", "130€");
-let product3 = new products("Caméra vintage Gaf 714 auto Zoom super 8 et sa sacoche.", "Objectif: 1,8 / 9 - 36 mm", "Exposition automatique.", "120€");
-let product4 = new products("Polaroid 600 - One Step 600 - Caméra film instantanée.", "Polaroid spirit 600.", "Couleur: Multicolore.", "50€");
-let product5 = new products("fujica single-8p2 camera 8mm", "en bon état.", "Dimensions: 5 x 15 x 23 cm", "300€");
-
-// Les instances sont regroupées dans un tableau //
-let product = [product0, product1, product2, product3, product4, product5];
-
-// Boucle pour parcourir le tableau et alimenter le HTML //
-for (let i = 0; i < 6; i++){
-    
-    // Variables servant à se repérer dans le code HTML ID //
-    let description = `description${i}`
-    let price = `price${i}`;
-
-    // Variables servant à construire le texte de la description à injecter dans le code HTML //
-    let line1 = product[i]['descriptionLine1'];
-    let line2 = product[i]['descriptionLine2'];
-    let line3 = product[i]['descriptionLine3'];
-
-    // Variable servant à construire le prix du produit à injecter dans le code HTML //
-    let euro  = product[i]['money'];
-
-    // Recherche des ID dans le HTML et injection des textes //
-    let productDescription = document.getElementById(description);
-    productDescription.innerHTML = `${line1}<br>${line2}<br>${line3}`;
-    let productPrice = document.getElementById(price);
-    productPrice.innerHTML = `${euro}`;
-
-}
+// Mise en route de la fonction //
+createProduct();
