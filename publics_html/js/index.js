@@ -1,7 +1,7 @@
 /* Nous interrogeons l'API :
 
 *** en cas de réponse positive nous alimentons le fichier index.html grâce à la fonction createProduct
-*** en cas de non réponse, l'erreur est retourné dans la console.
+*** en cas de non réponse, l'erreur est retournée dans la console.
 */
 
 
@@ -23,16 +23,15 @@ function createProduct (products){
         let cardsSection = document.getElementById('cardsSection');
         cardsSection.innerHTML += '' +
             '<article class="col-12 col-md-6 col-lg-4">' +
-            '<a class="text-decoration-none" href="./views/product.html">' +
-            '<div class="card border-dark h-100">' +
-            '<img class="card-img-top h-100" src=" ' + products[index].imageUrl + ' ">' +
-            '<div class="card-body">' +
-            '<h2 class="card-title h5">' + products[index].name + '</h2>' +
-            '<p class="card-text text-dark p-2">' + products[index].description + '</p>' +
-            '<div class="col-8 offset-2 border rounded-pill text-center text-light bg-dark mb-1 py-2">' + products[index].price + ' €</div>' +
-            '</div>' +
-            '</div>' +
-            '</a>' +
+                '<a class="text-decoration-none" href="./views/product.html?id=' + products[index]._id + '">' +
+                    '<div class="card border-dark h-100">' +
+                        '<img class="card-img-top h-100" src=" ' + products[index].imageUrl + ' ">' +
+                        '<div class="card-body p-0">' +
+                            '<h2 class="card-title h5 text-center">' + products[index].name + '</h2>' +
+                            '<div class="border text-center text-light bg-dark py-2">' + products[index].price/100 + ' €</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</a>' +
             '</article>';
     }
 }
