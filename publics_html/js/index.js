@@ -1,8 +1,15 @@
 /*
+La fonction numItem génère le nombre de produits dans le panier pour l'afficher dans la barre de navigation
+*/
+
+numItem()
+
+/*
 Grâce à la fonction getProduct() nous interrogeons l'API et testons la réponse.
 En cas de réponse positive, nous déclenchons la fonction createProduct avec comme paramètre la valeur de retour de l'API.
 En cas de réponse négative, nous retournons dans la console le type d'erreur.
 */
+
 getProduct();
 
 function getProduct (){
@@ -25,6 +32,7 @@ La fonction createProduct permets de créer les cards HTML des différents produ
 Une boucle for in (index, products) permet de créer le bon nombre de cards.
 la propriété innerHTML est utilisée pour ajouter du code dans la page HTML
  */
+
 function createProduct (products){
     for (index in products){
         let cardsSection = document.getElementById('cardsSection');

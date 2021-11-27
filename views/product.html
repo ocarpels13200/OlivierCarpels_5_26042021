@@ -1,148 +1,166 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../publics_html/CSS/bootstrap.min.css">
-        <link rel="stylesheet" href="../publics_html/CSS/style.css">
-        <script src="../publics_html/js/bootstrap.bundle.min.js" defer></script>
-        <script src="../publics_html/js/product.js" defer></script>
-        <title>Produits</title>
-    </head>
-    <body>
-        <!--Début du header-->
-        <header class="header">
-            <div class="container">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../publics_html/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../publics_html/CSS/style.css">
+    <script src="../publics_html/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../publics_html/js/basketItem.js" defer></script>
+    <script src="../publics_html/js/product.js" defer></script>
+    <title>Produits</title>
+</head>
+<body>
+<!--Début du header-->
+<header class="header">
+    <div class="container">
 
-                <div class="row">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <!--Logo-->
-                        <a href="../index.html" class="navbar-brand">
-                            <img src="../Images/Logo.png"  alt="Logo Orinoco">
-                        </a>
-                        <!--Bouton toggle pour mobile-->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!--Logo-->
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../Images/Logo.png" alt="Logo Orinoco">
+                </a>
+                <!--Bouton toggle pour mobile-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!--Menu-->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link d-flex flex-column align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                     class="bi bi-house-door" viewBox="0 0 16 16">
+                                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                </svg>
+                                Accueil
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex">
+                            <a href="basket.html" class="nav-link d-flex flex-column align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                     class="bi bi-basket" viewBox="0 0 16 16">
+                                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                                Panier
+                            </a>
+                            <span class="align-self-center text-white fw-bold rounded-circle bg-black px-2 mx-2"
+                                  id="basketItem"></span>
+                        </li>
+                    </ul>
+                    <!--Se connecter + message d'accueil-->
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" data-bs-toggle="offcanvas"
+                                data-bs-target="#connect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                 class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                            </svg>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarContent">
-                            <!--Menu-->
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a href="../index.html" class="nav-link d-flex flex-column align-items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-                                            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-                                        </svg>
-                                        Accueil
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="basket.html" class="nav-link d-flex flex-column align-items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
-                                            <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
-                                        </svg>
-                                        Panier
-                                    </a>
-                                </li>
-                            </ul>
-                            <!--Se connecter + message d'accueil-->
-                            <div class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" data-bs-toggle="offcanvas" data-bs-target="#connect">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-
-                <!--Fil d'ariane-->
-                <div class="row">
-                    <section id="arianeContainer" class="col-9">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="../index.html" id="ariane0">Orinoco - Accueil</a></li>
-                            <li id="ariane1" class="breadcrumb-item active">Produits</li>
-                        </ol>
-                    </section>
-                </div>
-
-            </div>
-        </header>
-        <main class="container">
-            <section id="description">
-                <article class="col-8 offset-2 my-5 card border-dark">
-                    <img src="" class="card-img-top">
-                    <div class="card-body p-0">
-                        <h2 class="card-title h5 text-center mt-4"></h2>
-                        <p class="card-text p-2"></p>
                     </div>
-                    <div class="card-footer border-dark bg-black bg-opacity-25 d-flex flex-column m-0 pt-3">
-                        <div class="d-flex justify-content-center">
-                           <label class="form-label w-25 align-self-center" for="options">Options :</label>
-                            <select id="options" class="form-select w-50" name="options">
-                                <option selected="">---Choisissez votre objectif---</option>
-                            </select>
-                        </div>
-                        <form>
-                            <div class="d-flex justify-content-center">
-                                <div class="form-floating my-3 w-75">
-                                    <input id="quantite" class="form-control" type="number" min="1" max="5" name="quantite" placeholder="quantite" required="required">
-                                    <label for="quantite">Quantité</label>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-around">
-                                <a class="btn btn-outline-primary" href="../index.html">Retour aux produits</a>
-                                <p class="border-dark bg-black text-light text-center m-0 p-2" id="price"></p>
-                                <a id="addBasket">
-                                    <span class="btn btn-outline-primary">Ajouter au panier</span>
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </article>
+                </div>
+            </nav>
+        </div>
+
+        <!--Fil d'ariane-->
+        <div class="row">
+            <section id="arianeContainer" class="col-9">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html" id="ariane0">Orinoco - Accueil</a></li>
+                    <li id="ariane1" class="breadcrumb-item active">Produits</li>
+                </ol>
             </section>
-        </main>
-        <footer class="footer">
-            <div class="container">
-                <div class="row ">
-                    <div class="navbar navbar-expand-lg navbar-light">
-                        <a href="../index.html" class="navbar-brand">
-                            <img src="../Images/Logo_mini.png" alt="Mini logo" class="align-self-center">
-                        </a>
-                        <ul class="nav ms-auto d-flex flex-column flex-md-row">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-dark">À propos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-dark">Condition de vente</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-dark">Nous contacter</a>
-                            </li>
-                        </ul>
-                    </div>
+        </div>
+
+    </div>
+</header>
+
+<!-- Description du produit sélectionné, une partie du code injectée par product.js -->
+<main class="container">
+    <section id="description">
+        <article class="col-8 offset-2 my-5 card border-dark">
+            <img src="" class="card-img-top">
+            <div class="card-body p-0">
+                <h2 class="card-title h5 text-center mt-4"></h2>
+                <p class="card-text p-2"></p>
+            </div>
+            <div class="card-footer border-dark bg-black bg-opacity-25 d-flex flex-column m-0 pt-3">
+                <div class="d-flex justify-content-center">
+                    <label class="form-label w-25 align-self-center" for="options">Options :</label>
+                    <select id="options" class="form-select w-50" name="options">
+                        <option selected="">---Choisissez votre objectif---</option>
+                    </select>
                 </div>
-            </div>
-        </footer>
-        <section class="offcanvas offcanvas-end" id="connect">
-            <div class="offcanvas-header">
-                <h2 class="h6">Se connecter</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
                 <form>
-                    <div class="mb-3 form-floating">
-                        <input type="text" name="identifiant" class="form-control" placeholder="Prénom et Nom de famille" id="identifiant">
-                        <label for="identifiant">Prénom et Nom de famille :</label>
+                    <div class="d-flex justify-content-center">
+                        <div class="form-floating my-3 w-75">
+                            <input id="quantite" class="form-control" type="number" min="1" max="5" name="quantite"
+                                   placeholder="quantite" required="required">
+                            <label for="quantite">Quantité</label>
+                        </div>
                     </div>
-                    <div class="mb-3 form-floating">
-                        <input type="password" name="password" class="form-control" placeholder="Votre mot de passe" id="password">
-                        <label for="password">Votre mot depasse :</label>
+                    <div class="d-flex justify-content-around">
+                        <a class="btn btn-outline-primary" href="../index.html">Retour aux produits</a>
+                        <p class="border-dark bg-black text-light text-center m-0 p-2" id="price"></p>
+                        <a id="addBasket">
+                            <span class="btn btn-outline-primary">Ajouter au panier</span>
+                        </a>
                     </div>
-                    <button type="submit" class="btn btn-primary">Se connecter</button>
                 </form>
             </div>
-        </section>
-    </body>
+        </article>
+    </section>
+</main>
+
+<!--Pied de page-->
+<footer class="footer">
+    <div class="container">
+        <div class="row ">
+            <div class="navbar navbar-expand-lg navbar-light">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../Images/Logo_mini.png" alt="Mini logo" class="align-self-center">
+                </a>
+                <ul class="nav ms-auto d-flex flex-column flex-md-row">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">Condition de vente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--Menu de connexion hors champ-->
+<section class="offcanvas offcanvas-end" id="connect">
+    <div class="offcanvas-header">
+        <h2 class="h6">Se connecter</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form>
+            <div class="mb-3 form-floating">
+                <input type="text" name="identifiant" class="form-control" placeholder="Prénom et Nom de famille"
+                       id="identifiant">
+                <label for="identifiant">Prénom et Nom de famille :</label>
+            </div>
+            <div class="mb-3 form-floating">
+                <input type="password" name="password" class="form-control" placeholder="Votre mot de passe"
+                       id="password">
+                <label for="password">Votre mot depasse :</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+    </div>
+</section>
+
+</body>
 </html>
