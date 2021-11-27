@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="../publics_html/CSS/style.css">
         <script src="../publics_html/js/bootstrap.bundle.min.js" defer></script>
         <script src="../publics_html/js/product.js" defer></script>
-        <script src="../publics_html/js/productValidate.js" defer></script>
         <title>Produits</title>
     </head>
     <body>
@@ -85,7 +84,7 @@
                                 <option selected="">---Choisissez votre objectif---</option>
                             </select>
                         </div>
-                        <form action="basket.html">
+                        <form>
                             <div class="d-flex justify-content-center">
                                 <div class="form-floating my-3 w-75">
                                     <input id="quantite" class="form-control" type="number" min="1" max="5" name="quantite" placeholder="quantite" required="required">
@@ -93,8 +92,11 @@
                                 </div>
                             </div>
                             <div class="d-flex justify-content-around">
+                                <a class="btn btn-outline-primary" href="../index.html">Retour aux produits</a>
                                 <p class="border-dark bg-black text-light text-center m-0 p-2" id="price"></p>
-                                <button class="btn btn-outline-primary" id="addBasket" type="button">Ajouter au panier</button>
+                                <a id="addBasket">
+                                    <span class="btn btn-outline-primary">Ajouter au panier</span>
+                                </a>
                             </div>
                         </form>
                     </div>
@@ -136,7 +138,7 @@
                     </div>
                     <div class="mb-3 form-floating">
                         <input type="password" name="password" class="form-control" placeholder="Votre mot de passe" id="password">
-                        <label for="password"">Votre mot depasse :</label>
+                        <label for="password">Votre mot depasse :</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Se connecter</button>
                 </form>

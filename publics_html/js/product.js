@@ -1,5 +1,5 @@
 let documentURL = document.location.search.substring(4);
-console.log(documentURL);
+let currentProduct = {};
 
 fetch("http://localhost:3000/api/cameras/" + documentURL)
     .then(function(res) {
@@ -8,25 +8,32 @@ fetch("http://localhost:3000/api/cameras/" + documentURL)
         }
     })
     .then(function(value) {
-        const product = value;
-        objectDescription(product);
+        currentProduct = value;
+        objectDescription(value);
     })
     .catch(function(err) {
         console.log(err);
     });
 
-function objectDescription(product){
+function objectDescription(productSelection){
    const productPicture = document.querySelector("#description img");
-   productPicture.src = product.imageUrl;
+   productPicture.src = productSelection.imageUrl;
    const productName = document.querySelector("#description h2");
-   productName.innerHTML = product.name;
+   productName.innerHTML = productSelection.name;
    const productDescription = document.querySelector("#description p");
-   productDescription.innerHTML = product.description;
-   for (index in product.lenses){
+   productDescription.innerHTML = productSelection.description;
+   for (index in productSelection.lenses){
        let option = `option${index}`;
        let productOption = document.getElementById("options");
-        productOption.innerHTML += '<option value=" ' + option + ' " id=" ' + option + ' ">' + product.lenses[index] + '</option>'
+        productOption.innerHTML += '<option value=" ' + option + ' " id=" ' + option + ' ">' + productSelection.lenses[index] + '</option>'
    }
    const productPrice = document.getElementById("price");
-   productPrice.innerHTML = product.price/100 + ' €';
+   productPrice.innerHTML = productSelection.price/100 + ' €';
 }
+
+let addBasket = document.getElementById("addBasket");
+addBasket.addEventListener("click", ev => {
+    currentProduct.quantity = document.querySelector('#quantite').value;
+    console.log("quantite1 :" + document.querySelector('#quantite').value);
+    localStorage.setItem("product", JSON.stringify(currentProduct));
+});
