@@ -7,174 +7,186 @@
     <link rel="stylesheet" href="../publics_html/CSS/bootstrap.min.css">
     <link rel="stylesheet" href="../publics_html/CSS/style.css">
     <script src="../publics_html/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../publics_html/js/basketItem.js" defer></script>
     <script src="../publics_html/js/basket.js" defer></script>
     <title>Orinoco - Caméras vintages</title>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a href="../index.html" class="navbar-brand">
-                        <img src="../Images/Logo.png"  alt="Logo Orinoco">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarContent">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a href="../index.html" class="nav-link d-flex flex-column align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-                                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-                                    </svg>
-                                    Accueil
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link active d-flex flex-column align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
-                                        <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
-                                    </svg>
-                                    Panier
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" data-bs-toggle="offcanvas" data-bs-target="#connect">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+<!--Début du header-->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!--Logo-->
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../Images/Logo.png" alt="Logo Orinoco">
+                </a>
+                <!--Bouton toggle pour mobile-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!--Menu-->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link d-flex flex-column align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                     class="bi bi-house-door" viewBox="0 0 16 16">
+                                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
                                 </svg>
-                            </button>
-                        </div>
-                    </div>
-                </nav>
-                <section>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
-                        <li class="breadcrumb-item active">Panier</li>
-                    </ol>
-                </section>
-            </div>
-        </div>
-    </header>
-    <main class="container">
-        <h1 class="h4 mt-3">Mon panier</h1>
-        <div class="row my-4">
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>Désignation du produit</th>
-                        <th>Prix unitaire TTC</th>
-                        <th>Quantité</th>
-                        <th>Total TTC</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td class="col-3 col-sm-6">*</td>
-                    <td class="col-3 col-sm-2">*</td>
-                    <td class="col-3 col-sm-2">
-                        <form>
-                            <select name="option" id="option" class="form-select">
-                                <option selected value="one">1</option>
-                                <option value="two">2</option>
-                                <option value="three">3</option>
-                            </select>
-                        </form>
-                    </td>
-                    <td class="col-3 col-sm-2">*</td>
-                </tr>
-                <tr>
-                    <td class="col-4 col-sm-6">*</td>
-                    <td class="col-4 col-sm-3">*</td>
-                    <td class="col-4 col-sm-3">*</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <th>Total TTC</th>
-                    <td>*</td>
-                </tr>
-            </table>
-            <div class="">
-                <form>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="mb-3 form-floating">
-                                <input type="text" name="Prenom" class="form-control" placeholder="Prénom" id="prenom">
-                                <label for="Prenom">Prénom :</label>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="mb-3 form-floating">
-                                <input type="text" name="Nom" class="form-control" placeholder="Nom" id="Nom">
-                                <label for="Nom">Nom :</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3 form-floating">
-                        <input type="text" name="Adresse" class="form-control" placeholder="Adresse" id="Adresse">
-                        <label for="Adresse">Adresse :</label>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="mb-3 form-floating">
-                                <input type="text" name="CP" class="form-control" placeholder="CP" id="CP">
-                                <label for="CP">CP :</label>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="mb-3 form-floating">
-                                <input type="text" name="Ville" class="form-control" placeholder="Ville" id="Ville">
-                                <label for="Ville">Ville :</label>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <button type="button" class="col-4 offset-7 col-sm-3 offset-sm-9 col-lg-2 offset-lg-10 my-3 btn btn-outline-primary">Commander</button>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="row ">
-                <div class="navbar navbar-expand-lg navbar-light">
-                    <a href="../index.html" class="navbar-brand">
-                        <img src="../Images/Logo_mini.png" alt="Mini logo" class="align-self-center">
-                    </a>
-                    <ul class="nav ms-auto d-flex flex-column flex-md-row">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-dark">À propos</a>
+                                Accueil
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-dark">Condition de vente</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-dark">Nous contacter</a>
+                        <li class="nav-item d-flex">
+                            <a href="#" class="nav-link active d-flex flex-column align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                     class="bi bi-basket" viewBox="0 0 16 16">
+                                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                                Panier
+                            </a>
+                            <span class="align-self-center text-white fw-bold rounded-circle bg-black px-2 mx-2" id="basketItem"></span>
                         </li>
                     </ul>
+                    <!--Se connecter + message d'accueil-->
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" data-bs-toggle="offcanvas"
+                                data-bs-target="#connect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                 class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--Fil d'ariane-->
+        <div class="row">
+            <section id="arianeContainer" class="col-9">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Orinoco - Accueil</a></li>
+                    <li class="breadcrumb-item active">Panier</li>
+                </ol>
+            </section>
+        </div>
+
+    </div>
+</header>
+
+<!-- Panier et calcul des prix -->
+<main class="container">
+    <!-- Titre -->
+    <h1 class="h4 mt-3">Mon panier</h1>
+
+    <!-- Tableau récapitulatif de la commande -->
+    <div class="table-responsive-sm">
+        <table class="table table-striped table-hover">
+            <!-- Entête du tableau -->
+            <thead>
+            <tr>
+                <th class="text-nowrap">Désignation du produit</th>
+                <th class="text-end px-5 text-nowrap">PU TTC</th>
+                <th class="text-center text-nowrap">Quantité</th>
+                <th class="text-end text-nowrap">Total TTC</th>
+            </tr>
+            </thead>
+            <tbody id="basket">
+            <!-- Création dynamique de lignes récapitulant la commande et le coût par le fichier basket.js -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Formulaire de commande -->
+    <div class="">
+        <form>
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3 form-floating">
+                        <input type="text" name="firstName" class="form-control" placeholder="Prénom" id="firstName">
+                        <label for="firstName">Prénom :</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3 form-floating">
+                        <input type="text" name="lastName" class="form-control" placeholder="Nom" id="lastName">
+                        <label for="lastName">Nom :</label>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <section class="offcanvas offcanvas-end" id="connect">
-        <div class="offcanvas-header">
-            <h2 class="h6">Se connecter</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-            <form>
-                <div class="mb-3 form-floating">
-                    <input type="text" name="identifiant" class="form-control" placeholder="Prénom et Nom de famille" id="identifiant">
-                    <label for="identifiant">Prénom et Nom de famille :</label>
+            <div class="mb-3 form-floating">
+                <input type="text" name="address" class="form-control" placeholder="Adresse" id="address">
+                <label for="address">Adresse :</label>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3 form-floating">
+                        <input type="text" name="city" class="form-control" placeholder="Ville" id="city">
+                        <label for="city">Ville :</label>
+                    </div>
                 </div>
-                <div class="mb-3 form-floating">
-                    <input type="password" name="password" class="form-control" placeholder="Votre mot de passe" id="password">
-                    <label for="password">Votre mot depasse :</label>
+                <div class="col-6">
+                    <div class="mb-3 form-floating">
+                        <input type="email" name="email" class="form-control" placeholder="E-mail" id="email">
+                        <label for="email">Email :</label>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Se connecter</button>
-            </form>
+            </div>
+        </form>
+    </div>
+    <!-- Bouton de validation de commande -->
+    <button type="button"
+            class="col-4 offset-7 col-sm-3 offset-sm-9 col-lg-2 offset-lg-10 my-3 btn btn-outline-primary">Commander
+    </button>
+</main>
+
+<!--Pied de page-->
+<footer class="footer">
+    <div class="container">
+        <div class="row ">
+            <div class="navbar navbar-expand-lg navbar-light">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../Images/Logo_mini.png" alt="Mini logo" class="align-self-center">
+                </a>
+                <ul class="nav ms-auto d-flex flex-column flex-md-row">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">Condition de vente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
+    </div>
+</footer>
+
+<!--Menu de connexion hors champ-->
+<section class="offcanvas offcanvas-end" id="connect">
+    <div class="offcanvas-header">
+        <h2 class="h6">Se connecter</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form>
+            <div class="mb-3 form-floating">
+                <input type="text" name="identifiant" class="form-control" placeholder="Prénom et Nom de famille"
+                       id="identifiant">
+                <label for="identifiant">Prénom et Nom de famille :</label>
+            </div>
+            <div class="mb-3 form-floating">
+                <input type="password" name="password" class="form-control" placeholder="Votre mot de passe"
+                       id="password">
+                <label for="password">Votre mot depasse :</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+    </div>
+</section>
 </body>
 </html>
