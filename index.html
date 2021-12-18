@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./publics_html/CSS/style.css">
+    <script src="./publics_html/js/basketItem.js" defer></script>
+    <script src="./publics_html/js/index.js" defer></script>
+    <title>Orinoco - Accueil</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body>
+<!--Début du header-->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <!-- Début de la barre de navigation -->
+            <nav  class="navbar navbar-expand-lg navbar-light">
+                <!--Site de vente Orinoco-->
+                <a href="index.html" class="navbar-brand">
+                    <img src="Images/Logo.png" alt="Logo Orinoco">
+                </a>
+                <!--Bouton toggle pour mobile-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!--Menu de navigation-->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active d-flex flex-column align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                     class="bi bi-house-door" viewBox="0 0 16 16">
+                                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                </svg>
+                                Accueil
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex">
+                            <a href="views/basket.html" class="nav-link d-flex flex-column align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                     class="bi bi-basket" viewBox="0 0 16 16">
+                                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                                Panier
+                            </a>
+                            <span class="align-self-center text-white fw-bold rounded-circle bg-black px-2 mx-2" id="basketItem"></span>
+                        </li>
+                    </ul>
+                    <!--Formulaire de recherche-->
+                    <div>
+                        <form id="searchForm">
+                            <div class="input-group">
+                                <input type="search" name="search" placeholder="Rechercher" class="form-control">
+                                <button type="submit" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!--Se connecter + message d'accueil-->
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" data-bs-toggle="offcanvas"
+                                data-bs-target="#connect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                 class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p id="welcome" class="ms-3"></p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--Fil d'ariane-->
+        <div class="row">
+            <div id="arianeContainer" class="col-9">
+                <ol class="breadcrumb">
+                    <li id="ariane0" class="breadcrumb-item active">Orinoco - Accueil</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <!--Début du Carousel-->
+    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Images/Caroussel/img1.jpg" class="d-block w-100" alt="RolleIcord">
+            </div>
+            <div class="carousel-item">
+                <img src="Images/Caroussel/img2.jpg" class="d-block w-100" alt="KoronaII">
+            </div>
+            <div class="carousel-item">
+                <img src="Images/Caroussel/img3.jpg" class="d-block w-100" alt="KoronaII">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--Titre de la page-->
+    <h1 class="h4 mt-3">Nos produits</h1>
+
+    <!--Message d'alerte-->
+    <div class="alert alert-info alert-dismissible show fade">
+        <div>
+            <p class="h6">En raison de la rareté des appareils présents sur notre site, nous vous invitons à consulter
+                nos approvisionnements régulièrement.</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!--Cards de présentation des produits-->
+    <div class="row my-4 gy-3" id="cardsSection">
+        <!-- génération des cards par le script JS index.js -->
+    </div>
+</main>
+
+<!--Pied de page-->
+<footer class="footer">
+    <div class="container">
+        <div class="row ">
+            <div class="navbar navbar-expand-lg navbar-light">
+                <a href="index.html" class="navbar-brand">
+                    <img src="Images/Logo_mini.png" alt="Mini logo" class="align-self-center">
+                </a>
+                <ul class="nav ms-auto d-flex flex-column flex-md-row">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">Condition de vente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">Nous contacter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--Menu de connexion hors champ-->
+<section class="offcanvas offcanvas-end" id="connect">
+    <div class="offcanvas-header">
+        <h2 class="h6">Se connecter</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form>
+            <div class="mb-3 form-floating">
+                <input type="text" name="identifiant" class="form-control" placeholder="Prénom et Nom de famille"
+                       id="identifiant">
+                <label for="identifiant">Prénom et Nom de famille :</label>
+            </div>
+            <div class="mb-3 form-floating">
+                <input type="password" name="password" class="form-control" placeholder="Votre mot de passe"
+                       id="password">
+                <label for="password">Votre mot depasse :</label>
+            </div>
+            <button type="submit" id="valide" class="btn btn-primary">Se connecter</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
