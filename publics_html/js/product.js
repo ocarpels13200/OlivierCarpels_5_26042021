@@ -25,8 +25,9 @@ En cas de réponse négative, nous retournons dans la console le type d'erreur.
 */
 getProduct();
 function getProduct () {
-    let documentURL = document.location.search.substring(4);
-    fetch("http://localhost:3000/api/cameras/" + documentURL)
+    let params = (new URL(document.location)).searchParams;
+    let idProduct = params.get('id');
+    fetch("http://localhost:3000/api/cameras/" + idProduct)
         .then(function (res) {
             if (res.ok) {
                 return res.json();
