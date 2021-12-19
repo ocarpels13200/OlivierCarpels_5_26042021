@@ -51,8 +51,14 @@ Affichage d'un article
 La fonction objectDescription permet grâce à innerHTML d'alimenter dynamiquement la page product.html avec les détails sur l'article choisi
 */
 function objectDescription(productSelection){
-   const productPicture = document.querySelector("#description img");
-   productPicture.src = productSelection.imageUrl;
+    /*Ajout de l'image */
+   const productPicture = document.querySelector("#description article");
+   const nextElement = document.querySelector("#description div");
+   const currentPicture = document.createElement("img");
+   currentPicture.src = productSelection.imageUrl;
+   currentPicture.classList.add("card-img-top");
+   productPicture.insertBefore(currentPicture, nextElement);
+
    const productName = document.querySelector("#description h2");
    productName.innerHTML = productSelection.name;
    const productDescription = document.querySelector("#description p");
